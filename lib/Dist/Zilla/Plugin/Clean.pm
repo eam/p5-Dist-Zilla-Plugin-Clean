@@ -28,8 +28,12 @@ sub after_release {
 
 	my $output = `dzil clean`;
 
-	$self -> log($output);
-	$self -> log('Folder is now spick-and-span');
+	if ($output eq "") {
+		$self -> log('Working directory already cleaned');
+	} else {
+		$self -> log($output);
+		$self -> log('Working directory is now spick-and-span');
+	}
 }
 
 =head1 AUTHOR
