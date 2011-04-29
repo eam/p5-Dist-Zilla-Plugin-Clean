@@ -26,14 +26,11 @@ Damn simple L<Dist::Zilla> plugin that runs C<dzil clean> after the release.
 sub after_release {
 	my $self = shift;
 
-	my $output = `dzil clean`;
+	$self -> log('Now cleaning working directory');
 
-	if ($output eq "") {
-		$self -> log('Working directory already cleaned');
-	} else {
-		$self -> log($output);
-		$self -> log('Working directory is now spick-and-span');
-	}
+	$self -> zilla -> clean;
+
+	$self -> log('Working directory is now spick-and-span');
 }
 
 =head1 AUTHOR
