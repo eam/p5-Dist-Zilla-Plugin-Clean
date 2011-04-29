@@ -19,7 +19,8 @@ In your F<dist.ini>:
 
 =head1 DESCRIPTION
 
-Damn simple L<Dist::Zilla> plugin that runs C<dzil clean> after the release.
+Damn simple L<Dist::Zilla> plugin that cleans the working directory after the
+release.
 
 =cut
 
