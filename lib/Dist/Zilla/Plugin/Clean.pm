@@ -19,7 +19,7 @@ In your F<dist.ini>:
 
 =head1 DESCRIPTION
 
-Damn simple L<Dist::Zilla> plugin that cleans the working directory after the
+Ultra simple L<Dist::Zilla> plugin that cleans the working directory after the
 release.
 
 =cut
@@ -27,11 +27,8 @@ release.
 sub after_release {
 	my $self = shift;
 
-	$self -> log('Now cleaning working directory');
-
+	$self -> log('cleaning working directory');
 	$self -> zilla -> clean;
-
-	$self -> log('Working directory is now spick-and-span');
 }
 
 =head1 AUTHOR
