@@ -19,8 +19,8 @@ In your F<dist.ini>:
 
 =head1 DESCRIPTION
 
-Ultra simple L<Dist::Zilla> plugin that cleans the working directory after the
-release.
+B<Dist::Zilla::Plugin::Clean> is a simple L<Dist::Zilla> plugin thet cleans the
+working directory (just like C<dzil clean>) after a release.
 
 =cut
 
