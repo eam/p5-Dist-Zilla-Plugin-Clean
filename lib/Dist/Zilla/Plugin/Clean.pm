@@ -1,9 +1,9 @@
 package Dist::Zilla::Plugin::Clean;
 
-use Moose;
-
 use strict;
 use warnings;
+
+use Moose;
 
 with 'Dist::Zilla::Role::AfterRelease';
 
